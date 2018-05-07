@@ -36,18 +36,18 @@ if __name__ == '__main__':
 
     cv = TfidfVectorizer(min_df=1,stop_words='english')
 
-    x_train, x_test, y_train, y_test = train_test_split(df_x, df_y, test_size=0.20, random_state=42)
+    x_train, x_test, y_train, y_test = train_test_split(df_x, df_y, test_size=0.20, random_state=22)
 
     #print(x_train.head())
 
     cv = TfidfVectorizer(min_df=1,stop_words='english')
-
+    '''
     x_traincv = cv.fit_transform(["Hi How are you How are you doing","Hi what's up","Wow that's awesome"])
 
     x_traincv.toarray()
 
     cv.get_feature_names()
-
+    '''
     cv1 = TfidfVectorizer(min_df=1,stop_words='english')
 
     x_traincv = cv1.fit_transform(x_train)
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     cv1.inverse_transform(a[0])
 
     print(x_train.iloc[1])
-
+    print("x-test--------------",x_test)
     x_testcv=cv1.transform(x_test)
 
     x_testcv.toarray()
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     #testmessage=x_test.iloc[0]
 
     #print(testmessage)
-    #print(x_testcv)
+    print("---input format---", x_testcv)
 
     predictions=mnb.predict(x_testcv)
 
@@ -101,10 +101,12 @@ if __name__ == '__main__':
 
 
 
-    print(x_test)
 
 
-    texta=[["Hi How are you How are you doing"]]
-    predict_val = mnb.predict(texta[0])
+    n_testcv = cv1.fit_transform(["Hi How are you How are you doing"])
+
+    n_testcv.toarray()
+    print(n_testcv)
+    predict_val = mnb.predict(n_testcv)
     print(predict_val)
 
