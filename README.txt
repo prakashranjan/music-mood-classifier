@@ -11,10 +11,10 @@ predictions of both classifiers.
 -------------
 CONTRIBUTORS
 -------------
-Prakash Ranjan Singh (1409113061)
-Prateek Singh Arya (1409113063)
-Prince Kumar Katiyar (1409113065)
-Vijay Prakash Chaurasia (1409113117)
+Prakash Ranjan Singh 
+Prateek Singh Arya 
+Prince Kumar Katiyar 
+Vijay Prakash Chaurasia 
 
 ----------------
 Getting Started
